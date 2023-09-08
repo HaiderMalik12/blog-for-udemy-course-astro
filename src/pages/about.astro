@@ -1,8 +1,25 @@
+---
+const pageTitle = "About Me";
+const project = {
+  id: 1,
+  name: "Astro",
+  technologies: ["Node.js", "Astro", "React"],
+};
+const skills = ["node", "css", "graphql", "html"];
+---
+
 <body>
   <h1>My Site</h1>
   <a href="/">Home</a> |
   <a href="/about"> About</a>
-  <h1>About Me</h1>
+  <h1>{pageTitle}</h1>
   <p>I am a fullstack web developer</p>
   <p>I teach developers how to build fullstack web appplications</p>
+  <p>{project.name}</p>
+  {
+    project.technologies.length && (
+      <p>Total Techonologies Used: {project.technologies.length}</p>
+    )
+  }
+  {skills.map((skill) => <li>{skill}</li>)}
 </body>
