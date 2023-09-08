@@ -6,6 +6,9 @@ const project = {
   technologies: ["Node.js", "Astro", "React"],
 };
 const skills = ["node", "css", "graphql", "html"];
+const happy = true;
+const finished = false;
+const flag = true;
 ---
 
 <body>
@@ -22,4 +25,6 @@ const skills = ["node", "css", "graphql", "html"];
     )
   }
   {skills.map((skill) => <li>{skill}</li>)}
+  <!-- Conditional Rendering -->
+  {flag && <p>I have completed my Astro project</p>}
 </body>
