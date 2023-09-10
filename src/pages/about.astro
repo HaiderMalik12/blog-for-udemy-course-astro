@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 const pageTitle = "About Me";
 const project = {
   id: 1,
@@ -28,6 +30,7 @@ const skillColor = "green";
   </style>
 </head>
 <body>
+  <Navigation />
   <h1>My Site</h1>
   <a href="/">Home</a> |
   <a href="/about"> About</a>
@@ -43,4 +46,5 @@ const skillColor = "green";
   {skills.map((skill) => <li class="skill">{skill}</li>)}
   <!-- Conditional Rendering -->
   {flag && <p>I have completed my Astro project</p>}
+  <Footer />
 </body>

@@ -1,7 +1,10 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
 <body>
-  <a href="/">Home</a> |
-  <a href="/about"> About</a> |
-  <a href="/blog">Blog</a>
+  <Navigation />
 
   <h1>My Blog</h1>
   <p>I share my experiences and learning journey</p>
@@ -10,4 +13,5 @@
     <li><a href="/posts/post-2">Learn GraphQL</a></li>
     <li><a href="/posts/post-3">Learn Node.js</a></li>
   </ul>
+  <Footer />
 </body>
