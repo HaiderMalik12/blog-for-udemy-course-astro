@@ -9,8 +9,23 @@ const skills = ["node", "css", "graphql", "html"];
 const happy = true;
 const finished = false;
 const flag = true;
+
+const skillColor = "green";
 ---
 
+<head>
+  <title>{pageTitle}</title>
+  <style define:vars={{ skillColor }}>
+    h1 {
+      color: grey;
+      font-size: 1rem;
+    }
+    .skill {
+      color: var(--skillColor);
+      font-weight: bold;
+    }
+  </style>
+</head>
 <body>
   <h1>My Site</h1>
   <a href="/">Home</a> |
@@ -24,7 +39,7 @@ const flag = true;
       <p>Total Techonologies Used: {project.technologies.length}</p>
     )
   }
-  {skills.map((skill) => <li>{skill}</li>)}
+  {skills.map((skill) => <li class="skill">{skill}</li>)}
   <!-- Conditional Rendering -->
   {flag && <p>I have completed my Astro project</p>}
 </body>
