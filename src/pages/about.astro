@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
 const pageTitle = "About Me";
 const project = {
   id: 1,
@@ -30,10 +31,8 @@ const skillColor = "green";
   </style>
 </head>
 <body>
-  <Navigation />
+  <Header />
   <h1>My Site</h1>
-  <a href="/">Home</a> |
-  <a href="/about"> About</a>
   <h1>{pageTitle}</h1>
   <p>I am a fullstack web developer</p>
   <p>I teach developers how to build fullstack web appplications</p>
