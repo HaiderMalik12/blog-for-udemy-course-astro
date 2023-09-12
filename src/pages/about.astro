@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About Me";
 const project = {
@@ -17,21 +16,7 @@ const flag = true;
 const skillColor = "green";
 ---
 
-<head>
-  <title>{pageTitle}</title>
-  <style define:vars={{ skillColor }}>
-    h1 {
-      color: grey;
-      font-size: 1rem;
-    }
-    .skill {
-      color: var(--skillColor);
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <Header />
+<BaseLayout pageTitle={pageTitle}>
   <h1>My Site</h1>
   <h1>{pageTitle}</h1>
   <p>I am a fullstack web developer</p>
@@ -45,8 +30,15 @@ const skillColor = "green";
   {skills.map((skill) => <li class="skill">{skill}</li>)}
   <!-- Conditional Rendering -->
   {flag && <p>I have completed my Astro project</p>}
-  <Footer />
-  <script>
-    import "../scripts/menu.js";
-  </script>
-</body>
+
+  <style define:vars={{ skillColor }}>
+    h1 {
+      color: grey;
+      font-size: 1rem;
+    }
+    .skill {
+      color: var(--skillColor);
+      font-weight: bold;
+    }
+  </style>
+</BaseLayout>
