@@ -1,10 +1,11 @@
 ---
+layout: '../../layouts/MarkdownPostLayout.astro'
 title: 'Learn Astro'
 pubDate: 2203-09-01
 description: 'This is my Astro blog post'
 author: 'Haider Malik'
 image: 
-   url: 'https://docs.astro.build/assets/full-logo-light.png'
+   url: 'https://contenthub-static.grammarly.com/blog/wp-content/uploads/2017/11/how-to-write-a-blog-post-760x406.jpeg'
    alt: 'The full Astro logo'
 tags: ["astro", "blogging", "learn astro"]
 ---
