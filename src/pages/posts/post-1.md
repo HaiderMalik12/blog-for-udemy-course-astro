@@ -7,7 +7,7 @@ author: 'Haider Malik'
 image: 
    url: 'https://contenthub-static.grammarly.com/blog/wp-content/uploads/2017/11/how-to-write-a-blog-post-760x406.jpeg'
    alt: 'The full Astro logo'
-tags: ["astro", "blogging", "learn astro"]
+tags: ["astro"]
 ---
 
 # What is Astro

@@ -6,7 +6,7 @@ author: 'Haider Malik'
 image: 
    url: 'https://docs.astro.build/assets/full-logo-light.png'
    alt: 'The full Node.js logo'
-tags: ["node.js", "blogging", "learn node.js"]
+tags: ["node.js"]
 ---
 
 # What is Node.js

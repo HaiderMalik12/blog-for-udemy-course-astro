@@ -6,7 +6,7 @@ author: 'Haider Malik'
 image: 
    url: 'https://docs.astro.build/assets/full-logo-light.png'
    alt: 'The full GraphQL logo'
-tags: ["graphql", "blogging", "learn graphql"]
+tags: ["graphql"]
 ---
 
 # What is GraphQL

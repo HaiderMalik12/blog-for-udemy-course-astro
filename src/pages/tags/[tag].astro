@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+
+export const getStaticPaths = (async () => {
+  const allPosts = await Astro.glob("../posts/*.md");
+  return [
+    { params: { tag: "astro" }, props: { posts: allPosts } },
+    { params: { tag: "node.js" }, props: { posts: allPosts } },
+    { params: { tag: "graphql" }, props: { posts: allPosts } },
+    { params: { tag: "angular" }, props: { posts: allPosts } },
+    { params: { tag: "react" }, props: { posts: allPosts } },
+  ];
+}) satisfies GetStaticPaths;
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+// filter all of the posts based on the current tag
+const filteredPosts = posts.filter((post) =>
+  post.frontmatter.tags?.includes(tag)
+);
+---
+
+<BaseLayout pageTitle={tag}>
+  <p>Posts tagged with {tag}</p>
+  <ul>
+    {filteredPosts.map((post) => <BlogPost post={post} />)}
+  </ul>
+</BaseLayout>
